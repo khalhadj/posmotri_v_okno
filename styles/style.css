@@ -6,6 +6,8 @@
 
 html {
   block-size: 100%;
+  scrollbar-width: thin;
+  scrollbar-color: #545050 #1B1919;
 }
 
 .page {
@@ -36,3 +38,245 @@ ul,
 ol {
   list-style: none;
 }
+
+.page { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content{
+  display: grid;
+  grid-template-columns: auto 399px;
+  gap: 30px;
+}
+
+.button {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #FFF;
+  cursor: pointer;
+  background: transparent;
+  padding: 6px 0;
+  border: 1px solid #FFF;
+}
+
+
+.button:focus-visible{
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+
+
+/* =============================! CONTENT DETAILS !==================================*/
+
+.title{ 
+  font-family: 'Oswald', sans-serif;
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 94%; /* 70.5px */
+  text-transform: uppercase;
+  margin-bottom: 26px;
+}
+
+
+.content__accent{
+  color: #545050;
+}
+
+.content__list{
+  position: relative;
+  height: 298px;
+  overflow: auto;
+}
+
+.content__list-item{
+  width: 99%;
+  margin-left: 1px;
+}
+
+.content__list-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.content__card-link{
+  text-decoration: none;
+  margin: 2px;  
+}
+
+
+.content__list:focus,
+.content__card-link:focus {
+  outline: none ;
+}
+
+.content__list:-moz-focus-inner,
+.content__card-link:-moz-focus-inner {
+  border: 0;
+}
+
+.content__card-link:focus-visible{
+  outline: 1px solid #fff ; 
+  outline-offset: 1px; 
+}
+
+.content__list-link:focus-visible{
+  outline: none;
+}
+
+.content__list-item:focus-visible{ 
+  border: 1px solid rgba(255, 255, 255, 0.70);
+  outline-offset: 1px;
+}
+
+
+.content__video-card-title{
+  color: #FFF;
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 100%; 
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.content__video-card-description{
+  color: #FFF;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 16.2px; 
+}
+
+.content__video-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
+  object-fit: cover; 
+  object-position: center;
+}
+
+.more-button{
+  width: 99%;
+  margin: 2px;
+}
+
+
+
+
+/* =============================! CONTENT DETAILS !==================================*/
+
+.result{
+  align-self: flex-end;
+}
+
+
+.result__video-container{
+  position: relative;
+  width: 711px;
+  height: 386px;
+  margin-bottom: 17px;
+}
+
+.result__video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  object-position: center;
+}
+
+
+
+.search-form{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-form__fieldset{
+  border: none;
+  width: fit-content;
+  padding-bottom: 10px;
+}
+
+.search-form__fieldset-title{
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.search-form__textfield{
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  border-width: 1px 0;
+  background-color: transparent;
+  color: #fff;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  width: 225px;
+  padding-right: 10px;
+}
+
+.search-form__textfield:focus{
+  outline: none;
+}
+
+.search-form__textfield:focus-visible{
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 16px;
+}
+
+
+
+.search-form__pseudo-checkbox {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  transition: .3s;
+  margin-right: 2px;
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.search-form__checkbox:checked + span {
+  background-color: #FFF;
+}
+
+input[type='checkbox']:focus-visible ~ span {
+  position: relative;
+  border: 1px #FFF;
+  outline-offset: 5px;
+}
+
+
+.search-form__submit-button{
+  align-self: end;
+  padding-left: 73px;
+  padding-right: 73px;
+}
+
+
+/* =============================! Visually-Hidden !==================================*/
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+} 
