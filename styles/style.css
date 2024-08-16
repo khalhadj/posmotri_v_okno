@@ -11,6 +11,9 @@ html {
 }
 
 .page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -39,12 +42,6 @@ ol {
   list-style: none;
 }
 
-.page { 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .content{
   display: grid;
   grid-template-columns: auto 399px;
@@ -59,9 +56,12 @@ ol {
   cursor: pointer;
   background: transparent;
   padding: 6px 0;
-  border: 1px solid #FFF;
+  border: 1px solid currentColor;
 }
 
+.button:focus{
+  outline: none;
+}
 
 .button:focus-visible{
   outline: 1px solid #fff;
@@ -79,11 +79,9 @@ ol {
 
 
 
-
-
-
-
 /* =============================! CONTENT DETAILS !==================================*/
+
+
 
 .title{ 
   font-family: 'Oswald', sans-serif;
@@ -94,7 +92,6 @@ ol {
   text-transform: uppercase;
   margin-bottom: 26px;
 }
-
 
 .content__accent{
   color: #545050;
@@ -114,8 +111,15 @@ ol {
 .content__card-link{
   display: block;
   text-decoration: none;
-  outline: none;
   margin: 1px;
+}
+
+.content__card-link{
+  outline: none;
+}
+
+.content__card-link_current {
+  background-color: #545050;
 }
 
 .content__card-link:focus-visible{
@@ -133,9 +137,8 @@ ol {
   background-color: #545050;
 }
 
-
-
 .content__video-card-title{
+  max-width: 180px;
   color: #FFF;
   font-family: 'Oswald', sans-serif;
   font-size: 30px;
@@ -146,12 +149,12 @@ ol {
 }
 
 .content__video-card-description{
+  max-width: 180px;
   color: #FFF;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 16.2px; 
-  
 }
 
 .content__video-card-description-container,
@@ -161,7 +164,6 @@ ol {
   text-overflow: ellipsis;
   text-wrap: nowrap;
 }
-
 
 .content__video-card {
   display: flex;
@@ -185,7 +187,6 @@ ol {
 .result{
   align-self: flex-end;
 }
-
 
 .result__video-container{
   position: relative;
@@ -264,10 +265,7 @@ ol {
   padding-right: 73px;
 }
 
-.search-form__checkbox{
-  outline: none;
-  vertical-align: middle;
-}
+
 
 .search-form__label {
   display: flex;
@@ -277,11 +275,11 @@ ol {
   outline: none;
 } 
 
-.search-form__label-text:hover {
+.search-form__checkbox-list .search-form__label:hover {
   text-decoration: underline;
 }
 
-.search-form__label:focus-visible {
+.search-form__label:focus-visible  {
   outline: 1px #FFF solid;
   outline-offset: 1px;
 } 
